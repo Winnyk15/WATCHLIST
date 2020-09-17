@@ -7,6 +7,17 @@ class Review:
         self.title = title
         self.imageurl = imageurl
         self.review = review
+        
+    @classmethod
+    def get_reviews(cls,id):
+
+        response = []
+
+        for review in cls.all_reviews:
+            if review.movie_id == id:
+                response.append(review)
+
+        return response    
 
 
     def save_review(self):

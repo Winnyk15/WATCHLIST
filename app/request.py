@@ -33,7 +33,7 @@ def get_movies(category):
 
 
 def get_movie(id):
-    get_movie_details_url = base_url.format(id,api_key)
+    get_movie_details_url = base_url.format(id,'b7632467799d69cccf0402ad33c5fdc5')
 
     with urllib.request.urlopen(get_movie_details_url) as url:
         movie_details_data = url.read()
